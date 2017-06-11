@@ -15,7 +15,7 @@ body {
 }
 
 a {
-    color: #1189D9;
+    color: #1565c0;
 }
 
 a:hover {
@@ -24,7 +24,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #1189D9;
+    color: #252528;
 }
 
 h1 {
@@ -101,13 +101,27 @@ h5, h6 {
 }
 
 .pi-block-title {
-    padding: 10px;
+    padding: 10px 0 5px 0;
+    text-align: right !important;
+    margin-bottom: 25px;
+    position: relative;
+    z-index : 1;
 }
 
-.pi-block-title h3 {
+.pi-block-title:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 150px;
+    border-bottom: 2px solid #666;
+}
+
+.pi-block-title h2,
+.pi-block-title h3{
     font-size: 1.2em;
-    padding: 0;
-    margin: 0;
+    color: #666;
 }
 
 .pi-panel-subline {
@@ -401,7 +415,7 @@ form .icon-question-sign {
 
 .pi-header .pi-header-body .pi-header-body-language a {
     font-size: 14px;
-    color: #1189D9;
+    color: #1565c0;
 }
 
 .pi-header .pi-header-image {
@@ -426,7 +440,7 @@ form .icon-question-sign {
 
 .pi-header .pi-header-box {
     position: absolute;
-    background: rgba(255,255,255,.3);
+    background: rgba(255, 255, 255, .3);
     border-radius: 4px;
     padding: 25px;
     bottom: 0;
@@ -446,9 +460,9 @@ form .icon-question-sign {
 .pi-header .navbar-default {
     margin-bottom: 0;
     border-radius: 0;
-    background-color: rgba(0,0,0, .5);
+    background-color: rgba(0, 0, 0, .5);
     border: 0;
-    border-bottom: 1px solid rgba(0,0,0, .65);
+    border-bottom: 1px solid rgba(0, 0, 0, .65);
 }
 
 .pi-header .navbar-default .navbar-brand {
@@ -511,7 +525,8 @@ form .icon-question-sign {
     position: relative;
 }
 
-.pi-section-page {}
+.pi-section-page {
+}
 
 .pi-section .pi-breadcrumbs {
     background-color: #f4f4f4;
@@ -525,11 +540,11 @@ form .icon-question-sign {
 .pi-section .pi-breadcrumbs .breadcrumb {
     background-color: #f4f4f4;
     margin-bottom: 0;
-    color: #1189D9;
+    color: #1565c0;
 }
 
 .pi-section .pi-breadcrumbs .breadcrumb a {
-    color: #1189D9;
+    color: #1565c0;
 }
 
 .pi-section .pi-module-content {
@@ -538,13 +553,17 @@ form .icon-question-sign {
     margin-bottom: 15px;
 }
 
+.pi-section .pi-main-container {
+    margin-top: 15px;
+}
+
 .pi-section-center-image {
     position: relative;
 }
 
 .pi-section-center-image-desc {
     position: absolute;
-    background: rgba(0,0,0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
     height: 100%;
     width: 100%;
     color: #fff;
@@ -552,7 +571,7 @@ form .icon-question-sign {
 
 .pi-section-center-image-box {
     position: absolute;
-    background: rgba(255,255,255, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     bottom: 0;
     width: 100%;
 }
@@ -564,6 +583,16 @@ form .icon-question-sign {
 
 .pi-section-center-image-desc-btn {
     padding: 15px;
+}
+
+.pi-section-news {
+    padding: 0 0 30px 0;
+    background-color: #e0e0e0;
+}
+
+.pi-section-bottom {
+    padding: 30px;
+    background-color: #bdbdbd;
 }
 /* footer */
 .pi-footer .pi-footer-social {
@@ -623,7 +652,7 @@ form .icon-question-sign {
 }
 
 .pi-footer .pi-footer-body a:hover {
-    color: #1189D9;
+    color: #1565c0;
 }
 
 .pi-footer .pi-footer-body h3 {
@@ -653,7 +682,7 @@ form .icon-question-sign {
 }
 
 .pi-footer .pi-footer-copyright a:hover {
-    color: #1189D9;
+    color: #1565c0;
 }
 
 /* extra */
@@ -754,7 +783,7 @@ form .icon-question-sign {
 
 .widget-list-summary i {
     font-size: 60px;
-    color: #1189D9;
+    color: #1565c0;
 }
 
 .widget-list-media-single-image {

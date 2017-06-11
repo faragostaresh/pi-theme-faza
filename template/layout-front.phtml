@@ -278,54 +278,109 @@ $breadcrumbs = $this->breadcrumb(
             <div class="pi-main-container">
                 <!-- Module content ends -->
                 <div class="row">
-                    <?php if (isset($blocks['5']) || isset($blocks['6'])) { ?>
-                        <div class="col-md-6 pi-zone-5">
-                            <?php
-                            if (isset($blocks['5'])) {
-                                foreach ($blocks['5'] as $block) {
+                    <?php if (isset($blocks['5'])) { ?>
+                        <div class="col-md-12 pi-zone-5">
+                            <?php foreach ($blocks['5'] as $block) {
                                     include $blockTemplate;
-                                }
-                            }
-                            ?>
+                                } ?>
                         </div>
-                        <div class="col-md-6 pi-zone-6">
-                            <?php
-                            if (isset($blocks['6'])) {
-                                foreach ($blocks['6'] as $block) {
+                      <?php } ?>
+                    <?php if (isset($blocks['6'])) { ?>
+                        <div class="col-md-12 pi-zone-6">
+                            <?php foreach ($blocks['6'] as $block) {
                                     include $blockTemplate;
-                                }
-                            }
-                            ?>
-                        </div>
-                    <?php } ?>
-                    <!-- Center bottom zone -->
-                    <?php if (isset($blocks['7'])) { ?>
-                        <div class="pi-zone-7 col-md-12">
-                            <?php foreach ($blocks['7'] as $block) {
-                                include $blockTemplate;
-                            } ?>
+                                } ?>
                         </div>
                     <?php } ?>
                 </div>
             </div>
         </div>
-        <!-- Bottom foot zone -->
-        <?php if (isset($blocks['99'])) { ?>
-            <div class="pi-zone-99">
-                <?php foreach ($blocks['99'] as $block) {
-                    include $blockTemplate;
-                } ?>
-            </div>
-        <?php } ?>
     </section>
+    <!-- Bottom foot zone -->
+    <?php if (isset($blocks['7'])) { ?>
+        <section class="pi-section-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 pi-zone-7">
+                        <?php foreach ($blocks['7'] as $block) {
+                            include $blockTemplate;
+                        } ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php } ?>
+    <?php if (isset($blocks['99'])) { ?>
+        <section class="pi-section-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 pi-zone-99">
+                        <?php foreach ($blocks['99'] as $block) {
+                            include $blockTemplate;
+                        } ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php } ?>
 <?php } else { ?>
-
-
-
-
-
-
-
+    <header class="pi-header">
+        <div class="pi-header-body">
+            <div class="pi-header-user">
+                <nav class="navbar navbar-default">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="navbar-header">
+                                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <i class="fa fa-bars"></i>
+                                    </button>
+                                    <?php if ($module == 'system') { ?>
+                                        <h1>
+                                            <a href="<?php echo Pi::url($this->url('home')); ?>/" title="<?php echo _escape($sitename); ?>">
+                                                <?php echo _escape($sitename); ?>
+                                            </a>
+                                        </h1>
+                                    <?php } else { ?>
+                                        <h2>
+                                            <a href="<?php echo Pi::url($this->url('home')); ?>/" title="<?php echo _escape($sitename); ?>">
+                                                <?php echo _escape($sitename); ?>
+                                            </a>
+                                        </h2>
+                                    <?php } ?>
+                                </div>
+                                <div class="navbar-collapse collapse">
+                                    <?php echo $navigation->menu()->setUlClass('nav navbar-nav pi-navbar-nav'); ?>
+                                    <div class="navbar-right">
+                                        <?php echo $this->widget('system-user-bar'); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="pi-header-box  clearfix">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="pi-header-box-text">
+                    <p>به وب سایت فضا خوش آمدید</p>
+                </div>
+                <?php echo $this->widget('search-search'); ?>
+            </div>
+        </div>
+        <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source data-srcset="<?php echo $this->assetTheme('image/header-mobi-ete.jpg'); ?>" media="(max-width: 320px)" srcset="<?php echo $this->assetTheme('image/header-mobi-ete.jpg'); ?>">
+            <source data-srcset="<?php echo $this->assetTheme('image/header-smart-ete.jpg'); ?>" media="(max-width: 480px)" srcset="<?php echo $this->assetTheme('image/header-smart-ete.jpg'); ?>">
+            <source data-srcset="<?php echo $this->assetTheme('image/header-tab-ete.jpg'); ?>" media="(max-width: 768px)" srcset="<?php echo $this->assetTheme('image/header-tab-ete.jpg'); ?>">
+            <source data-srcset="<?php echo $this->assetTheme('image/header-lap-ete.jpg'); ?>" media="(max-width: 1366px)" srcset="<?php echo $this->assetTheme('image/header-lap-ete.jpg'); ?>">
+            <source data-srcset="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>" media="(max-width: 1920px)" srcset="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>">
+            <source data-srcset="<?php echo $this->assetTheme('image/header-desk-ete.jpg'); ?>" media="(max-width: 2880px)" srcset="<?php echo $this->assetTheme('image/header-desk-ete.jpg'); ?>">
+            <!--[if IE 9]></video><![endif]-->
+            <img class="home-banner img-responsive lazyloaded" data-src="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>" alt="<?php echo _escape($sitename); ?>" src="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>">
+        </picture>
+    </header>
     <!-- Page main content: breadcrumb, flash-messenger, blocks and module content -->
     <section class="pi-section  clearfix <?php if ($module != 'system') { echo 'pi-section-page';} ?>">
         <?php if ($breadcrumbs) { ?>
