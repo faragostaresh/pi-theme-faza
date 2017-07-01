@@ -804,3 +804,16 @@ form .icon-question-sign {
 .search-block {
     margin-top: 20px;
 }
+
+/* news */
+.news-item-block-magazine h3,
+.news-item-block-magazine h4 {
+    padding: 5px 0;
+    font-size: 1em;
+}
+
+.news-item-block-magazine-sub {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
