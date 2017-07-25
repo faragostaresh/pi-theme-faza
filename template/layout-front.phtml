@@ -95,6 +95,29 @@ $breadcrumbs = $this->breadcrumb(
         )
     ))
 );
+
+// Set image
+$headerImage = '';
+if ($module == 'contact') {
+    $headerImage = 'https://www.faza.ir/upload/images/header-contactus.jpg';
+} elseif ($module == 'shop') {
+    $headerImage = 'https://www.faza.ir/upload/images/header-procurement.jpg';
+} elseif ($module == 'page') {
+    $d = (array) Pi::service('url')->getRouteMatch();
+    foreach ($d as $value) {
+        $a[] = $value;
+    }
+    if ($a[1]['action'] == 'consult') {
+        $headerImage = 'https://www.faza.ir/upload/images/header-consult.jpg';
+    }
+    if ($a[1]['action'] == 'education') {
+        $headerImage = 'https://www.faza.ir/upload/images/header-education.jpg';
+    }
+    if ($a[1]['action'] == 'nano-food') {
+        $headerImage = 'https://www.faza.ir/upload/images/header-nano-food.jpg';
+    }
+}
+
 ?>
 <!DOCTYPE HTML>
 <html lang="<?php echo $locale; ?>">
@@ -150,17 +173,17 @@ $breadcrumbs = $this->breadcrumb(
                 <?php echo $this->widget('search-search'); ?>
             </div>
         </div>
-        <picture>
-            <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source data-srcset="<?php echo $this->assetTheme('image/header-mobi-ete.jpg'); ?>" media="(max-width: 320px)" srcset="<?php echo $this->assetTheme('image/header-mobi-ete.jpg'); ?>">
-            <source data-srcset="<?php echo $this->assetTheme('image/header-smart-ete.jpg'); ?>" media="(max-width: 480px)" srcset="<?php echo $this->assetTheme('image/header-smart-ete.jpg'); ?>">
-            <source data-srcset="<?php echo $this->assetTheme('image/header-tab-ete.jpg'); ?>" media="(max-width: 768px)" srcset="<?php echo $this->assetTheme('image/header-tab-ete.jpg'); ?>">
-            <source data-srcset="<?php echo $this->assetTheme('image/header-lap-ete.jpg'); ?>" media="(max-width: 1366px)" srcset="<?php echo $this->assetTheme('image/header-lap-ete.jpg'); ?>">
-            <source data-srcset="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>" media="(max-width: 1920px)" srcset="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>">
-            <source data-srcset="<?php echo $this->assetTheme('image/header-desk-ete.jpg'); ?>" media="(max-width: 2880px)" srcset="<?php echo $this->assetTheme('image/header-desk-ete.jpg'); ?>">
-            <!--[if IE 9]></video><![endif]-->
-            <img class="home-banner img-responsive lazyloaded" data-src="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>" alt="<?php echo _escape($sitename); ?>" src="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>">
-        </picture>
+            <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source data-srcset="<?php echo $this->assetTheme('image/header-mobi-ete.jpg'); ?>" media="(max-width: 320px)" srcset="<?php echo $this->assetTheme('image/header-mobi-ete.jpg'); ?>">
+                <source data-srcset="<?php echo $this->assetTheme('image/header-smart-ete.jpg'); ?>" media="(max-width: 480px)" srcset="<?php echo $this->assetTheme('image/header-smart-ete.jpg'); ?>">
+                <source data-srcset="<?php echo $this->assetTheme('image/header-tab-ete.jpg'); ?>" media="(max-width: 768px)" srcset="<?php echo $this->assetTheme('image/header-tab-ete.jpg'); ?>">
+                <source data-srcset="<?php echo $this->assetTheme('image/header-lap-ete.jpg'); ?>" media="(max-width: 1366px)" srcset="<?php echo $this->assetTheme('image/header-lap-ete.jpg'); ?>">
+                <source data-srcset="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>" media="(max-width: 1920px)" srcset="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>">
+                <source data-srcset="<?php echo $this->assetTheme('image/header-desk-ete.jpg'); ?>" media="(max-width: 2880px)" srcset="<?php echo $this->assetTheme('image/header-desk-ete.jpg'); ?>">
+                <!--[if IE 9]></video><![endif]-->
+                <img class="home-banner img-responsive lazyloaded" data-src="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>" alt="<?php echo _escape($sitename); ?>" src="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>">
+            </picture>
     </header>
     <!-- Page main content: breadcrumb, flash-messenger, blocks and module content -->
     <section class="pi-section  clearfix <?php if ($module != 'system') { echo 'pi-section-page';} ?>">
@@ -369,17 +392,21 @@ $breadcrumbs = $this->breadcrumb(
                 <?php echo $this->widget('search-search'); ?>
             </div>
         </div>
-        <picture>
-            <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source data-srcset="<?php echo $this->assetTheme('image/header-mobi-ete.jpg'); ?>" media="(max-width: 320px)" srcset="<?php echo $this->assetTheme('image/header-mobi-ete.jpg'); ?>">
-            <source data-srcset="<?php echo $this->assetTheme('image/header-smart-ete.jpg'); ?>" media="(max-width: 480px)" srcset="<?php echo $this->assetTheme('image/header-smart-ete.jpg'); ?>">
-            <source data-srcset="<?php echo $this->assetTheme('image/header-tab-ete.jpg'); ?>" media="(max-width: 768px)" srcset="<?php echo $this->assetTheme('image/header-tab-ete.jpg'); ?>">
-            <source data-srcset="<?php echo $this->assetTheme('image/header-lap-ete.jpg'); ?>" media="(max-width: 1366px)" srcset="<?php echo $this->assetTheme('image/header-lap-ete.jpg'); ?>">
-            <source data-srcset="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>" media="(max-width: 1920px)" srcset="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>">
-            <source data-srcset="<?php echo $this->assetTheme('image/header-desk-ete.jpg'); ?>" media="(max-width: 2880px)" srcset="<?php echo $this->assetTheme('image/header-desk-ete.jpg'); ?>">
-            <!--[if IE 9]></video><![endif]-->
-            <img class="home-banner img-responsive lazyloaded" data-src="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>" alt="<?php echo _escape($sitename); ?>" src="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>">
-        </picture>
+        <?php if (empty($headerImage)) { ?>
+            <picture>
+                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                <source data-srcset="<?php echo $this->assetTheme('image/header-mobi-ete.jpg'); ?>" media="(max-width: 320px)" srcset="<?php echo $this->assetTheme('image/header-mobi-ete.jpg'); ?>">
+                <source data-srcset="<?php echo $this->assetTheme('image/header-smart-ete.jpg'); ?>" media="(max-width: 480px)" srcset="<?php echo $this->assetTheme('image/header-smart-ete.jpg'); ?>">
+                <source data-srcset="<?php echo $this->assetTheme('image/header-tab-ete.jpg'); ?>" media="(max-width: 768px)" srcset="<?php echo $this->assetTheme('image/header-tab-ete.jpg'); ?>">
+                <source data-srcset="<?php echo $this->assetTheme('image/header-lap-ete.jpg'); ?>" media="(max-width: 1366px)" srcset="<?php echo $this->assetTheme('image/header-lap-ete.jpg'); ?>">
+                <source data-srcset="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>" media="(max-width: 1920px)" srcset="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>">
+                <source data-srcset="<?php echo $this->assetTheme('image/header-desk-ete.jpg'); ?>" media="(max-width: 2880px)" srcset="<?php echo $this->assetTheme('image/header-desk-ete.jpg'); ?>">
+                <!--[if IE 9]></video><![endif]-->
+                <img class="home-banner img-responsive lazyloaded" data-src="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>" alt="<?php echo _escape($sitename); ?>" src="<?php echo $this->assetTheme('image/header-xlap-ete.jpg'); ?>">
+            </picture>
+        <?php } else { ?>
+            <img class="home-banner img-responsive lazyloaded" data-src="<?php echo $headerImage; ?>" alt="<?php echo _escape($sitename); ?>" src="<?php echo $headerImage; ?>">
+        <?php } ?>
     </header>
     <!-- Page main content: breadcrumb, flash-messenger, blocks and module content -->
     <section class="pi-section  clearfix <?php if ($module != 'system') { echo 'pi-section-page';} ?>">
@@ -514,8 +541,8 @@ $breadcrumbs = $this->breadcrumb(
                 <div class="col-md-6 pi-footer-social-text">فضا، فضایی برای ساخت آینده ... </div>
                 <div class="col-md-6 text-right">
                     <ul class="list-inline">
-                        <li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" title=""><i class="fa fa-telegram"></i></a></li>
+                        <li><a href="#" title=""><i class="fa fa-youtube"></i></a></li>
                         <li><a href="#" title=""><i class="fa fa-instagram"></i></a></li>
                         <li><a href="#" title=""><i class="fa fa-linkedin"></i></a></li>
                     </ul>
