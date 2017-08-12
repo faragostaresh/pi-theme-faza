@@ -135,20 +135,20 @@ if ($module == 'contact') {
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="navbar-header">
+                                <div class="navbar-header pi-header-logo">
                                     <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                         <i class="fa fa-bars"></i>
                                     </button>
                                     <?php if ($module == 'system') { ?>
                                         <h1>
-                                            <a href="<?php echo Pi::url($this->url('home')); ?>/" title="<?php echo _escape($sitename); ?>">
-                                                <?php echo _escape($sitename); ?>
+                                            <a href="<?php echo Pi::url($this->url('home')); ?>" title="<?php echo _escape($sitename); ?>">
+                                                <img class="img-responsive" src="<?php echo $this->assetTheme('image/logo.png'); ?>" alt="<?php echo _escape($sitename); ?>">
                                             </a>
                                         </h1>
                                     <?php } else { ?>
                                         <h2>
-                                            <a href="<?php echo Pi::url($this->url('home')); ?>/" title="<?php echo _escape($sitename); ?>">
-                                                <?php echo _escape($sitename); ?>
+                                            <a href="<?php echo Pi::url($this->url('home')); ?>" title="<?php echo _escape($sitename); ?>">
+                                                <img class="img-responsive" src="<?php echo $this->assetTheme('image/logo.png'); ?>" alt="<?php echo _escape($sitename); ?>">
                                             </a>
                                         </h2>
                                     <?php } ?>
@@ -165,7 +165,7 @@ if ($module == 'contact') {
                 </nav>
             </div>
         </div>
-        <div class="pi-header-box  clearfix">
+        <div class="pi-header-box hidden-xs clearfix">
             <div class="col-md-offset-3 col-md-6">
                 <div class="pi-header-box-text">
                     <p>به وب سایت فضا خوش آمدید</p>
@@ -276,8 +276,11 @@ if ($module == 'contact') {
                         <div class="row">
                             <div class="col-md-offset-2 col-md-8">
                                 <div class="text-center">
-                                    <div class="pi-section-center-image-desc-text">در باشگاه نخبگان فضایی</div>
-                                    <div class="pi-section-center-image-desc-btn"><a title="ثبت نام کنید" href="<?php echo Pi::url($this->url('home')); ?>/user/register" class="btn btn-primary btn-lg">ثبت نام کنید</a></div>
+                                    <div class="pi-section-center-image-desc-text">در باشگاه نخبگان ثبت نام کنید و در پروژه های اشتراکی ایده باز ما مشارکت کنید</div>
+                                    <div class="pi-section-center-image-desc-btn">
+                                        <a title="ثبت نام کنید" href="<?php echo Pi::url($this->url('home')); ?>/user/register" class="btn btn-primary btn-lg">ثبت نام کنید</a>
+                                        <a title="مشارکت کنید" href="<?php echo Pi::url($this->url('home')); ?>/ask" class="btn btn-primary btn-lg">مشارکت کنید</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -354,20 +357,20 @@ if ($module == 'contact') {
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="navbar-header">
+                                <div class="navbar-header pi-header-logo">
                                     <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                         <i class="fa fa-bars"></i>
                                     </button>
                                     <?php if ($module == 'system') { ?>
                                         <h1>
-                                            <a href="<?php echo Pi::url($this->url('home')); ?>/" title="<?php echo _escape($sitename); ?>">
-                                                <?php echo _escape($sitename); ?>
+                                            <a href="<?php echo Pi::url($this->url('home')); ?>" title="<?php echo _escape($sitename); ?>">
+                                                <img class="img-responsive" src="<?php echo $this->assetTheme('image/logo.png'); ?>" alt="<?php echo _escape($sitename); ?>">
                                             </a>
                                         </h1>
                                     <?php } else { ?>
                                         <h2>
-                                            <a href="<?php echo Pi::url($this->url('home')); ?>/" title="<?php echo _escape($sitename); ?>">
-                                                <?php echo _escape($sitename); ?>
+                                            <a href="<?php echo Pi::url($this->url('home')); ?>" title="<?php echo _escape($sitename); ?>">
+                                                <img class="img-responsive" src="<?php echo $this->assetTheme('image/logo.png'); ?>" alt="<?php echo _escape($sitename); ?>">
                                             </a>
                                         </h2>
                                     <?php } ?>
@@ -385,7 +388,7 @@ if ($module == 'contact') {
             </div>
         </div>
         <?php if (empty($headerImage)) { ?>
-            <div class="pi-header-box  clearfix">
+            <div class="pi-header-box hidden-xs clearfix">
                 <div class="col-md-offset-3 col-md-6">
                     <div class="pi-header-box-text">
                         <p>به وب سایت فضا خوش آمدید</p>
@@ -583,7 +586,7 @@ if ($module == 'contact') {
     <div class="pi-footer-copyright text-center">
         <div class="container">
             <div class="row">
-                <div class="col-md-12" data-rel="license">تمام حقوق مطالب برای وب سایت <a title="<?php echo _escape($sitename); ?>" href="<?php echo Pi::url($this->url('home')); ?>/"><?php echo _escape($sitename); ?></a> محفوظ است.</div>
+                <div class="col-md-12" data-rel="license">تمام حقوق مطالب برای وب سایت <a title="<?php echo _escape($sitename); ?>" href="<?php echo Pi::url($this->url('home')); ?>"><?php echo _escape($sitename); ?></a> محفوظ است.</div>
             </div>
         </div>
     </div>

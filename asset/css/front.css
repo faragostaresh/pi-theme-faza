@@ -518,6 +518,10 @@ form .icon-question-sign {
     }
 }
 
+.pi-header .pi-header-logo img {
+    height: 45px;
+}
+
 /* section */
 .pi-section {
     background: #fff;
@@ -580,6 +584,7 @@ form .icon-question-sign {
 .pi-section-center-image-desc-text {
     padding: 15px;
     font-size: 25px;
+    line-height: 35px;
 }
 
 .pi-section-center-image-desc-btn {
@@ -817,4 +822,8 @@ form .icon-question-sign {
     margin-bottom: 5px;
     padding-bottom: 5px;
     border-bottom: 1px solid #ccc;
+}
+
+.news-item-block-magazine-sub img {
+    max-height: 150px;
 }
